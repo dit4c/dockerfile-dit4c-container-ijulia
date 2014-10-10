@@ -28,8 +28,7 @@ RUN yum install -y \
   libyaml-devel
 
 # Install system-indepedent python environment
-RUN virtualenv /opt/python && \
-  echo "export PATH=/opt/python/bin:$PATH" > /etc/profile.d/opt_python.sh
+RUN virtualenv /opt/python
 
 # Install from PIP
 # - Notebook dependencies
