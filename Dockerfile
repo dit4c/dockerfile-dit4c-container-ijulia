@@ -34,11 +34,13 @@ RUN virtualenv /opt/python
 # - Notebook dependencies
 # - iPython (with notebook)
 # - Readline for usability
+# - Missing IPython dependency
 RUN /opt/python/bin/pip install --upgrade setuptools && \
   /opt/python/bin/pip install \
     tornado pyzmq jinja2 \
     ipython \
-    pyreadline
+    pyreadline \
+    jsonschema
 
 # Create IJulia profile, then
 # install MathJAX locally because CDN is HTTP-only
